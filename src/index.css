@@ -1,0 +1,218 @@
+/* Global reset for predictable box model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+/* Form elements */
+input,
+textarea,
+button {
+  padding: 8px;
+  font-size: 14px;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Reusable buttons */
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* Workspace Dashboard */
+.workspace-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  width: 100%;
+}
+
+.workspace-dashboard h1 {
+  margin-bottom: 20px;
+}
+
+/* Add board inputs and button spacing */
+.workspace-dashboard input,
+.workspace-dashboard button {
+  margin-bottom: 10px;
+}
+
+/* Boards list */
+.workspace-dashboard ul {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Each board card */
+.workspace-dashboard li.board {
+  width: 250px;
+  min-height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px; /* space between title, desc, buttons */
+}
+
+/* Buttons inside board card */
+.workspace-dashboard li.board button {
+  margin-right: 10px;
+}
+
+/* Board Page */
+.board-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.board-page h1 {
+  margin-bottom: 20px;
+}
+
+/* Back to Dashboard button */
+.board-page > button {
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+
+/* Add column section */
+.add-column-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+/* Columns container */
+.board-page .columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Individual column */
+.column {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  min-width: 220px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  gap: 10px;
+}
+
+/* Column title */
+.column h3 {
+  margin-bottom: 10px;
+}
+
+/* Add card section inside column */
+.add-card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Individual card */
+.card {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Card title */
+.card h4 {
+  margin-bottom: 5px;
+}
+
+/* Card tags */
+.card span {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+/* Modal overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Modal buttons */
+.modal-content button {
+  margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .board-page .columns,
+  .workspace-dashboard ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input,
+  button {
+    max-width: 90%;
+  }
+
+  .column,
+  .workspace-dashboard li.board {
+    max-width: 90%;
+  }
+}
