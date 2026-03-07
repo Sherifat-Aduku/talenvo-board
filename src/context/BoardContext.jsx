@@ -1,5 +1,6 @@
 // src/context/BoardContext.jsx
-import React, { createContext, useReducer } from "react";
+import React, {  useReducer } from "react";
+import { BoardContext } from "./BoardContextObject";
 
 const initialState = {
   boards: {},   // boardId: { id, title, description, createdAt, columnIds: [] }
@@ -127,11 +128,9 @@ const reducer = (state, action) => {
     }
 
     default:
-      return state;
+    return state;
   }
 };
-
-export const BoardContext = createContext();
 
 export const BoardProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
